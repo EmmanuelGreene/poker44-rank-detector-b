@@ -103,8 +103,8 @@ class MLMiner(BaseMinerNeuron):
                 Path(MODEL_DIR) / "poker44_ml" / "features.py",
             ],
             defaults={
-                "model_name": "poker44-rank-detector-b",
-                "model_version": "3.2",
+                "model_name": os.environ.get("POKER44_MODEL_NAME", "poker44-rank-detector-b"),
+                "model_version": os.environ.get("POKER44_MODEL_VERSION", "2.2-b"),
                 "framework": "lossguide-stack4 + monotone-lgbm + pca56-mlp80 (weighted-rank 35/30/35)",
                 "license": "MIT",
                 "repo_url": repo_url,
