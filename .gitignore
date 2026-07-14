@@ -1,0 +1,50 @@
+# poker44-rank-detector-b — publish the full repo except private/local generated data.
+# NEVER published: trained model weights/artifacts, training pipeline,
+# deployment credentials, local caches/logs.
+
+# Credentials and local runtime
+.env
+*.env
+miner_env
+miner_env/
+
+# Model weights and artifact stores
+model/artifacts/
+model/artifacts_backups/
+model/artifacts_staging/
+model/data_cache
+model/data_cache/
+*.pkl
+*.joblib
+*.pt
+*.bin
+
+# Training pipeline and data
+training/
+train_data/
+
+# Local logs and caches
+*.log
+*.jsonl
+catboost_info/
+__pycache__/
+*.pyc
+
+# Private model artifacts / data (deployed on miner VPS, not committed)
+*.pkl
+*.joblib
+*.pt
+*.pth
+*.onnx
+*.bin
+model/artifacts/*
+!model/artifacts/.gitkeep
+models/*
+!models/.gitkeep
+model/data_cache/
+data_cache/
+logs/
+wandb/
+.venv/
+__pycache__/
+*.pyc
